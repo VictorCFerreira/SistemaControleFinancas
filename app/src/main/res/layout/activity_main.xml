@@ -9,108 +9,109 @@
 
 
     <TextView
-        android:id="@+id/textViewTipo"
+        android:id="@+id/tvTipo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Tipo:"
         android:layout_marginEnd="8dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/spinnerTipo" />
+        app:layout_constraintEnd_toStartOf="@id/spTipo" />
 
     <Spinner
-        android:id="@+id/spinnerTipo"
+        android:id="@+id/spTipo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@id/textViewTipo"
-        app:layout_constraintStart_toEndOf="@id/textViewTipo"
+        app:layout_constraintTop_toTopOf="@id/tvTipo"
+        app:layout_constraintStart_toEndOf="@id/tvTipo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0" />
 
     <TextView
-        android:id="@+id/textViewDetalhe"
+        android:id="@+id/tvDetalhe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Detalhe:"
         android:layout_marginEnd="8dp"
-        app:layout_constraintTop_toBottomOf="@id/spinnerTipo"
+        app:layout_constraintTop_toBottomOf="@id/spTipo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/spinnerDetalhe" />
+        app:layout_constraintEnd_toStartOf="@id/spDetalhe" />
 
     <Spinner
-        android:id="@+id/spinnerDetalhe"
+        android:id="@+id/spDetalhe"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@id/textViewDetalhe"
-        app:layout_constraintStart_toEndOf="@id/textViewDetalhe"
+        app:layout_constraintTop_toTopOf="@id/tvDetalhe"
+        app:layout_constraintStart_toEndOf="@id/tvDetalhe"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0" />
 
     <TextView
-        android:id="@+id/textViewValorLabel"
+        android:id="@+id/etValorLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Valor:"
         android:layout_marginEnd="8dp"
-        app:layout_constraintTop_toBottomOf="@id/spinnerDetalhe"
+        app:layout_constraintTop_toBottomOf="@id/spDetalhe"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/textViewValor" />
+        app:layout_constraintEnd_toStartOf="@id/etValor" />
 
-    <TextView
-        android:id="@+id/textViewValor"
+    <EditText
+        android:id="@+id/etValor"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="0.00"
         android:gravity="end"
-        app:layout_constraintTop_toTopOf="@id/textViewValorLabel"
-        app:layout_constraintStart_toEndOf="@id/textViewValorLabel"
+        app:layout_constraintTop_toTopOf="@id/etValorLabel"
+        app:layout_constraintStart_toEndOf="@id/etValorLabel"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:id="@+id/textViewDataLancamento"
+        android:id="@+id/tvDataLancamento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Data Lançamento:"
         android:layout_marginEnd="8dp"
-        app:layout_constraintTop_toBottomOf="@id/textViewValor"
+        app:layout_constraintTop_toBottomOf="@id/etValor"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/editTextDataLancamento" />
+        app:layout_constraintEnd_toStartOf="@id/etDataLancamento" />
 
     <EditText
-        android:id="@+id/editTextDataLancamento"
+        android:id="@+id/etDataLancamento"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:inputType="date"
-        app:layout_constraintTop_toTopOf="@id/textViewDataLancamento"
-        app:layout_constraintStart_toEndOf="@id/textViewDataLancamento"
+        app:layout_constraintTop_toTopOf="@id/tvDataLancamento"
+        app:layout_constraintStart_toEndOf="@id/tvDataLancamento"
         app:layout_constraintEnd_toEndOf="parent" />
 
 
     <Button
-        android:id="@+id/buttonLancar"
+        android:id="@+id/btLancar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Lançar"
-        app:layout_constraintTop_toBottomOf="@id/editTextDataLancamento"
+        app:layout_constraintTop_toBottomOf="@id/etDataLancamento"
         app:layout_constraintStart_toStartOf="parent"
+        android:onClick="btLancarOnClick"
         android:layout_marginTop="16dp"/>
 
     <Button
-        android:id="@+id/buttonVerLancamentos"
+        android:id="@+id/btVerLancamentos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ver lançamentos"
-        app:layout_constraintTop_toBottomOf="@id/buttonLancar"
+        app:layout_constraintTop_toBottomOf="@id/btLancar"
         app:layout_constraintStart_toStartOf="parent"
-
+        android:onClick="btVerLancamentosOnClick"
         android:layout_marginTop="8dp"/>
 
     <Button
-        android:id="@+id/buttonSaldo"
+        android:id="@+id/btSaldo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Saldo"
-        app:layout_constraintTop_toBottomOf="@id/buttonVerLancamentos"
+        app:layout_constraintTop_toBottomOf="@id/btVerLancamentos"
         app:layout_constraintStart_toStartOf="parent"
+        android:onClick="btSaldoOnClick"
         android:layout_marginTop="8dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
